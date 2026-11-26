@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070707">
+  <title>Non-stop Anonymous Cyber Force | Recruitment</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-light: #f7e7a1;
+      --gold-dark: #8b6f1f;
+      --black: #070707;
+      --surface: #111111;
+      --surface-2: #161616;
+      --line: rgba(212, 175, 55, 0.24);
+      --line-strong: rgba(212, 175, 55, 0.48);
+      --text: #f1f0eb;
+      --muted: #9a9a9a;
+      --danger: #ff7070;
+      --success: #62d98c;
+      --radius: 16px;
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.75);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px 16px;
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(212, 175, 55, 0.10), transparent 26rem),
+        radial-gradient(circle at 88% 18%, rgba(212, 175, 55, 0.08), transparent 24rem),
+        #070707;
+      color: var(--text);
+      font-family: 'Hind Siliguri', 'Segoe UI', sans-serif;
+      line-height: 1.5;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: radial-gradient(circle at center, black, transparent 78%);
+      -webkit-mask-image: radial-gradient(circle at center, black, transparent 78%);
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 900px);
+      padding: clamp(22px, 4.5vw, 46px);
+      border: 1px solid transparent;
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(28, 28, 28, 0.96), rgba(10, 10, 10, 0.98)) padding-box,
+        linear-gradient(135deg, rgba(247, 231, 161, 0.55), rgba(212, 175, 55, 0.12) 42%, rgba(139, 111, 31, 0.55)) border-box;
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+    }
+
+    .top-pic {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 16 / 5;
+      margin-bottom: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      border-radius: 18px;
+      background: #080808;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.42);
+    }
+
+    .top-pic > img,
+    .top-pic > svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .logo-container {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: radial-gradient(circle at 35% 30%, #2a2517, #0b0b0b 70%);
+      border: 1px solid var(--line-strong);
+      box-shadow:
+        0 0 32px rgba(212, 175, 55, 0.18),
+        inset 0 0 16px rgba(212, 175, 55, 0.10);
+    }
+
+    .logo-container svg {
+      width: 64px;
+      height: 64px;
+      display: block;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--gold);
+      font-family: 'Orbitron', 'Hind Siliguri', sans-serif;
+      font-size: clamp(20px, 4.2vw, 30px);
+      line-height: 1.1;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: var(--text);
+    }
+
+    .subtitle {
+      margin: 7px 0 0;
+      color: #a5a5a5;
+      font-size: 14px;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0 0 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(212, 175, 55, 0.055);
+      border-radius: 999px;
+      color: #cfc7a5;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5ee28c;
+      box-shadow: 0 0 0 4px rgba(94, 226, 140, 0.12);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      50% {
+        box-shadow: 0 0 0 7px rgba(94, 226, 140, 0);
+      }
+    }
+
+    .rules {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.17);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.065), rgba(255, 255, 255, 0.018));
+      overflow: hidden;
+    }
+
+    .rules summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 17px;
+      cursor: pointer;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .rules summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .rule-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .rule-icon {
+      font-size: 16px;
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+    }
+
+    .chevron {
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1;
+      transform: translateY(-1px);
+      transition: transform 0.25s ease;
+    }
+
+    .rules[open] .chevron {
+      transform: translateY(-1px) rotate(180deg);
+    }
+
+    .rules-body {
+      padding: 0 17px 16px;
+    }
+
+    .rules ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 9px;
+    }
+
+    .rules li {
+      display: flex;
+      gap: 9px;
+      color: #cecece;
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+
+    .rules li::before {
+      content: "✦";
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .progress-card {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 24px;
+      padding: 13px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.055);
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.20);
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+    }
+
+    .progress-top span:last-child {
+      color: var(--gold-light);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px;
+    }
+
+    .progress-track {
+      height: 7px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #232323;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .progress-fill {
+      display: block;
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #8b6f1f, var(--gold), var(--gold-light));
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+      transition: width 0.35s ease;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px 16px;
+    }
+
+    .form-group {
+      position: relative;
+      min-width: 0;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: #d8d0b0;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .req {
+      color: var(--gold);
+    }
+
+    .optional {
+      color: #777;
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #363636;
+      border-radius: 12px;
+      outline: none;
+      background: #0d0d0d;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+      transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+    }
+
+    input[type="date"] {
+      color-scheme: dark;
+    }
+
+    input:hover,
+    textarea:hover {
+      border-color: #505050;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      background: #0f0f0f;
+      box-shadow:
+        0 0 0 4px rgba(212, 175, 55, 0.10),
+        0 0 22px rgba(212, 175, 55, 0.06);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #666;
+    }
+
+    textarea {
+      min-height: 112px;
+      resize: vertical;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .choice {
+      position: relative;
+    }
+
+    .choice input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .choice label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin: 0;
+      padding: 13px 14px;
+      border: 1px solid #363636;
+      border-radius: 12px;
+      background: #0d0d0d;
+      color: #d8d8d8;
+      cursor: pointer;
+      user-select: none;
+      transition:
+        background 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s,
+        color 0.2s,
+        transform 0.2s;
+    }
+
+    .choice label::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid #686868;
+      box-sizing: border-box;
+      transition:
+        background 0.2s,
+        border-color 0.2s;
+    }
+
+    .choice label:hover {
+      border-color: #5b5b5b;
+    }
+
+    .choice input:checked + label {
+      color: #171204;
+      border-color: var(--gold);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.16);
+    }
+
+    .choice input:checked + label::before {
+      border-color: #2a210b;
+      background: radial-gradient(circle, #2a210b 0 4px, transparent 4.5px);
+    }
+
+    .choice input:focus-visible + label {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    .file-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .file-drop {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      border: 1.5px dashed rgba(212, 175, 55, 0.38);
+      border-radius: 14px;
+      background: rgba(212, 175, 55, 0.035);
+      cursor: pointer;
+      transition:
+        border-color 0.2s,
+        background 0.2s,
+        transform 0.2s;
+    }
+
+    .file-drop:hover,
+    .file-drop.dragover {
+      border-color: var(--gold);
+      background: rgba(212, 175, 55, 0.075);
+    }
+
+    .file-input:focus + .file-drop {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    .file-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: rgba(212, 175, 55, 0.10);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      font-size: 22px;
+    }
+
+    .file-thumb {
+      display: none;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+
+    .file-drop.has-file .file-icon {
+      display: none;
+    }
+
+    .file-drop.has-file .file-thumb {
+      display: block;
+    }
+
+    .file-text {
+      min-width: 0;
+    }
+
+    .file-text strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .file-text small {
+      display: block;
+      margin-top: 3px;
+      color: #888;
+      font-size: 11.5px;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .field-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .error {
+      color: var(--danger);
+      font-size: 12px;
+      min-height: 16px;
+    }
+
+    .counter {
+      color: #777;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .hp-field {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .submit-btn {
+      position: relative;
+      width: 100%;
+      margin-top: 6px;
+      padding: 15px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      color: #181204;
+      background: linear-gradient(135deg, #fff2b6 0%, var(--gold) 44%, #a17d22 100%);
+      box-shadow:
+        0 14px 34px rgba(212, 175, 55, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+      font-family: 'Orbitron', 'Hind Siliguri', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease,
+        opacity 0.2s;
+    }
+
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -130%;
+      width: 70%;
+      height: 100%;
+      transform: skewX(-24deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.48), transparent);
+      transition: left 0.55s ease;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 46px rgba(212, 175, 55, 0.32);
+      filter: brightness(1.03);
+    }
+
+    .submit-btn:hover:not(:disabled)::before {
+      left: 140%;
+    }
+
+    .submit-btn:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.68;
+      cursor: not-allowed;
+      filter: saturate(0.65);
+    }
+
+    .spinner {
+      display: none;
+      width: 17px;
+      height: 17px;
+      border: 2px solid rgba(0, 0, 0, 0.20);
+      border-top-color: #111;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .submit-btn.loading .spinner {
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .form-note {
+      margin: 14px 0 0;
+      color: #787878;
+      font-size: 11.5px;
+      text-align: center;
+      line-height: 1.65;
+    }
+
+    .form-note strong {
+      color: var(--gold-light);
+    }
+
+    .footer-bar {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(212, 175, 55, 0.14);
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.015);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+    }
+
+    .socials a:hover {
+      color: #171204;
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .copyright {
+      color: #666;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 20;
+      left: 50%;
+      bottom: 24px;
+      width: min(92vw, 460px);
+      transform: translate(-50%, 20px);
+      opacity: 0;
+      pointer-events: none;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(12, 12, 12, 0.96);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(10px);
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .toast.success {
+      border-color: rgba(98, 217, 140, 0.5);
+    }
+
+    .toast.error {
+      border-color: rgba(255, 112, 112, 0.55);
+    }
+
+    .toast .toast-title {
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .toast .toast-message {
+      color: #cfcfcf;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 16px 10px;
+        align-items: start;
+      }
+
+      .container {
+        padding: 22px 16px;
+        border-radius: 22px;
+      }
+
+      .top-pic {
+        aspect-ratio: 16 / 7;
+      }
+
+      .brand {
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .logo-container {
+        width: 68px;
+        height: 68px;
+      }
+
+      .logo-container svg {
+        width: 54px;
+        height: 54px;
+      }
+
+      h1 {
+        font-size: 21px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .choice-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .copyright {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .choice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand {
+        flex-direction: column;
+      }
+
+      .status-row {
+        gap: 7px;
+      }
+
+      .badge {
+        font-size: 10px;
+        padding: 6px 9px;
+      }
+
+      .file-drop {
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+
+    
+      <svg
+        id="fallbackBanner"
+        style="display:none"
+        viewBox="0 0 1200 360"
+        preserveAspectRatio="xMidYMid slice"
+        role="img"
+        aria-label="Non-stop Anonymous Cyber Force"
+      >
+        <defs>
+          <linearGradient id="bannerBg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#070707"/>
+            <stop offset="52%" stop-color="#15130c"/>
+            <stop offset="100%" stop-color="#070707"/>
+          </linearGradient>
+          <radialGradient id="bannerGlow" cx="80%" cy="20%" r="65%">
+            <stop offset="0%" stop-color="#d4af37" stop-opacity=".28"/>
+            <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+          </radialGradient>
+          <pattern id="bannerGrid" width="44" height="44" patterns="userSpaceOnUse">
+            <path d="M44 0H0V44" fill="none" stroke="#d4af37" stroke-opacity=".10" stroke-width="1"/>
+          </pattern>
+          <linearGradient id="bannerGold" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#fff1a8"/>
+            <stop offset="48%" stop-color="#d4af37"/>
+            <stop offset="100%" stop-color="#8b6f1f"/>
+          </linearGradient>
+        </defs>
+
+        <rect width="1200" height="360" fill="url(#bannerBg)"/>
+        <rect width="1200" height="360" fill="url(#bannerGlow)"/>
+        <rect width="1200" height="360" fill="url(#bannerGrid)" opacity=".5"/>
+
+        <g opacity=".22" stroke="#d4af37" fill="none">
+          <path d="M-50 290 250 20h120L60 320Z" stroke-width="1.2"/>
+          <path d="M170 360 500 20h90L260 360Z" stroke-width=".8"/>
+          <path d="M980 -20 720 360" stroke-width="1.1"/>
+          <path d="M1120 360 880 20" stroke-width=".8"/>
+        </g>
+
+        <g transform="translate(80 150)">
+          <text x="0" y="0" fill="#8f8f8f" font-family="Orbitron, sans-serif" font-size="13" letter-spacing="6">
+            SECURE RECRUITMENT PORTAL
+          </text>
+          <text x="0" y="64" fill="url(#bannerGold)" font-family="Orbitron, sans-serif" font-size="56" font-weight="700" letter-spacing="4">
+            Non-Stop Anonymous Cyber Force
+          </text>
+          <text x="0" y="108" fill="#f1f0eb" font-family="Orbitron, sans-serif" font-size="30" letter-spacing="9">
+            CYBER 
+          </text>
+          <text x="0" y="155" fill="#9a9a9a" font-family="Hind Siliguri, sans-serif" font-size="20">
+            অফিসিয়াল টিম মেম্বার রিক্রুটমেন্ট
+          </text>
+          <path d="M0 178h420" stroke="url(#bannerGold)" stroke-width="2"/>
+        </g>
+
+        <g transform="translate(840 64)">
+          <circle cx="140" cy="110" r="130" fill="#080808" stroke="url(#bannerGold)" stroke-width="2.2" opacity=".8"/>
+          <g transform="translate(56 24) scale(1.55)">
+            <path d="M28 40 14 25l30 4 6-10 6 10 30-4-14 15c2 13-4 28-22 35-18-7-24-22-22-35Z" fill="#101010" stroke="url(#bannerGold)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M39 42c2.2 1.3 4.7 1.3 7 0M54 42c2.3 1.3 4.8 1.3 7 0" fill="none" stroke="url(#bannerGold)" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M49 56h2l-1 3-1-3Z" fill="#d4af37"/>
+            <path d="M44 64c3.4 3.2 8.6 3.2 12 0" fill="none" stroke="url(#bannerGold)" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M50 59v5M34 49c5-3 9 .5 11 6M66 49c-5-3-9 .5-11 6" fill="none" stroke="#d4af37" stroke-opacity=".5" stroke-width="1.7" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <header class="brand">
+      <div class="logo-container" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Non-Stop Anonymous Cyber Force logo">
+          <defs>
+            <linearGradient id="btGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#fff1ac"/>
+              <stop offset="48%" stop-color="#d4af37"/>
+              <stop offset="100%" stop-color="#7f631b"/>
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="#080808" stroke="url(#btGold)" stroke-width="2"/>
+          <path d="M28 40 14 25l30 4 6-10 6 10 30-4-14 15c2 13-4 28-22 35-18-7-24-22-22-35Z" fill="#101010" stroke="url(#btGold)" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M39 42c2.2 1.3 4.7 1.3 7 0M54 42c2.3 1.3 4.8 1.3 7 0" fill="none" stroke="url(#btGold)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M49 56h2l-1 3-1-3Z" fill="url(#btGold)"/>
+          <path d="M44 64c3.4 3.2 8.6 3.2 12 0" fill="none" stroke="url(#btGold)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M50 59v5M34 49c5-3 9 .5 11 6M66 49c-5-3-9 .5-11 6" fill="none" stroke="rgba(212,175,55,.55)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="brand-copy">
+        <span class="eyebrow">// Secure Recruitment Portal</span>
+        <h1>Non-Stop Anonymous <span>Cyber Force</span></h1>
+        <p class="subtitle">অফিসিয়াল টিম মেম্বার রিক্রুটমেন্ট ফর্ম</p>
+      </div>
+    </header>
+
+    <div class="status-row">
+      <span class="badge"><span class="dot"></span> Hacker Team</span>
+      <span class="badge">🔒 SECURE CHANNEL</span>
+      <span class="badge">😎 Opps Hacking</span>
+      <span class="badge">⚡ 24–48H REVIEW</span>
+    </div>
+
+    <details class="rules" open>
+      <summary>
+        <span class="rule-title">
+          <span class="rule-icon">⚠️</span>
+          টিমের নিয়মাবলী
+        </span>
+        <span class="chevron">⌄</span>
+      </summary>
+      <div class="rules-body">
+        <ul>
+          <li>টিমের অভ্যন্তরীন কোনো গোপন তথ্য বাইরে প্রকাশ করা সম্পূর্ণ নিষেধ।</li>
+          <li>সব সময় টিমের সিনিয়র ও সহকর্মীদের প্রতি সম্মান বজায় রাখতে হবে।</li>
+          <li>কোনো প্রকার অবৈধ বা ক্ষতিকারক কাজে টিমের নাম ব্যবহার করা যাবে না।</li>
+          <li>টিমের মিটিং ও যেকোনো অ্যাক্টিভিটিতে সক্রিয় থাকতে হবে।</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="progress-card" aria-hidden="true">
+      <div class="progress-top">
+        <span>আবেদন প্রগ্রেস</span>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-track">
+        <span class="progress-fill" id="progressFill"></span>
+      </div>
+    </div>
+
+    <form id="joinForm" novalidate>
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="name">নাম <span class="req">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="80"
+            autocomplete="name"
+            placeholder="আপনার পূর্ণ নাম"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="age">বয়স <span class="req">*</span></label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            required
+            min="10"
+            max="99"
+            inputmode="numeric"
+            placeholder="যেমন: 21"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="dob">জন্ম তারিখ <span class="req">*</span></label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">মোবাইল নম্বর <span class="req">*</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            maxlength="15"
+            autocomplete="tel"
+            inputmode="tel"
+            placeholder="01XXXXXXXXX"
+          >
+        </div>
+
+        <div class="form-group full">
+          <label for="address">স্থায়ী ঠিকানা <span class="req">*</span></label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            required
+            maxlength="200"
+            autocomplete="street-address"
+            placeholder="আপনার স্থায়ী ঠিকানা"
+          >
+        </div>
+
+        <div class="form-group full">
+          <label for="current_address">বর্তমান ঠিকানা <span class="req">*</span></label>
+          <input
+            type="text"
+            id="current_address"
+            name="current_address"
+            required
+            maxlength="200"
+            autocomplete="address-line1"
+            placeholder="আপনার বর্তমান ঠিকানা"
+          >
+        </div>
+
+        <div class="form-group full">
+          <label for="email">ইমেইল <span class="req">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            maxlength="120"
+            autocomplete="email"
+            placeholder="example@gmail.com"
+          >
+        </div>
+
+        <div class="form-group full">
+          <label>আগে কোনো টিমে ছিলেন? <span class="req">*</span></label>
+          <div class="choice-grid">
+            <div class="choice">
+              <input type="radio" id="prev_team_yes" name="previous_team" value="হ্যাঁ" required>
+              <label for="prev_team_yes">হ্যাঁ</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="prev_team_no" name="previous_team" value="না" checked required>
+              <label for="prev_team_no">না</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="reason">কেন Join হচ্ছেন? <span class="req">*</span></label>
+          <textarea
+            id="reason"
+            name="reason"
+            required
+            minlength="20"
+            maxlength="600"
+            placeholder="সংক্ষেপে আপনার কারণ লিখুন..."
+          ></textarea>
+          <div class="field-row">
+            <span class="error" id="reasonError" aria-live="polite"></span>
+            <span class="counter" id="reasonCount">0/600</span>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label>ছবি আপলোড করুন <span class="optional">(ঐচ্ছিক)</span></label>
+          <input
+            class="file-input"
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            capture="user"
+          >
+          <label class="file-drop" id="fileDrop" for="photo">
+            <span class="file-icon" id="fileIcon" aria-hidden="true">📷</span>
+            <img class="file-thumb" id="fileThumb" alt="Selected photo preview">
+            <span class="file-text">
+              <strong id="fileName">ছবি তুলে দিন / পিক আপলোড করুন</strong>
+              <small id="fileMeta">JPG, PNG, WEBP • সর্বোচ্চ ৫ MB • Catbox-এ আপলোড হবে</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="form-group full hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-text" id="btnText">JOIN NOW</span>
+      </button>
+
+      <p class="form-note">
+        <strong>নোট:</strong> ছবি Catbox-এ পাবলিকভাবে আপলোড হবে এবং তার লিংক Telegram-এ পাঠানো হবে।
+        আপনার তথ্য শুধুমাত্র রিক্রুটমেন্ট প্রক্রিয়ার জন্য ব্যবহৃত হবে।
+      </p>
+    </form>
+
+    <footer class="footer-bar">
+      <div class="socials">
+        <a href="#" target="_blank" rel="noopener">Telegram</a>
+        <a href="#" target="_blank" rel="noopener">Facebook Page</a>
+        <a href="#" target="_blank" rel="noopener">Facebook Group</a>
+      </div>
+      <span class="copyright">© <span id="year"></span> Non-stop Anonymous Cyber Force</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const CONFIG = {
+        credentialsFile: 'server.txt',
+        catboxEndpoint: 'https://catbox.moe/user/api.php',
+        catboxTimeoutMs: 60000,
+        maxPhotoMB: 5,
+        phoneRegex: /^(?:\+?88)?01[3-9]\d{8}$/
+      };
+
+      const $ = (id) => document.getElementById(id);
+
+      const form = $('joinForm');
+      const photoInput = $('photo');
+      const fileDrop = $('fileDrop');
+      const fileThumb = $('fileThumb');
+      const fileName = $('fileName');
+      const fileMeta = $('fileMeta');
+      const reasonInput = $('reason');
+      const reasonCount = $('reasonCount');
+      const progressFill = $('progressFill');
+      const progressText = $('progressText');
+      const submitBtn = $('submitBtn');
+      const btnText = $('btnText');
+      const toast = $('toast');
+      const dobInput = $('dob');
+      const ageInput = $('age');
+      const phoneInput = $('phone');
+      const honeypot = $('website');
+
+      let previewUrl = null;
+      let toastTimer = null;
+
+      $('year').textContent = new Date().getFullYear();
+
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      dobInput.max = `${yyyy}-${mm}-${dd}`;
+
+      function escapeHTML(value) {
+        return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[char]));
+      }
+
+      function showToast(message, type = 'info') {
+        const titles = {
+          success: 'সফল',
+          error: 'সমস্যা',
+          info: 'তথ্য'
+        };
+
+        toast.className = `toast show ${type}`;
+        toast.innerHTML = `
+          <div class="toast-title">${escapeHTML(titles[type] || 'তথ্য')}</div>
+          <div class="toast-message">${escapeHTML(message)}</div>
+        `;
+
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 5600);
+      }
+
+      function formatBytes(bytes) {
+        if (!bytes) return '0 B';
+
+        const s = ['B', 'KB', 'MB', 'GB'];
+        const index = Math.min(
+          Math.floor(Math.log(bytes) / Math.log(1024)),
+          s.length - 1
+        );
+
+        return `${(bytes / Math.pow(1024, index)).toFixed(index ? 1 : 0)} ${s[index]}`;
+      }
+
+      function setLoading(loading, text) {
+        submitBtn.disabled = loading;
+        submitBtn.classList.toggle('loading', loading);
+        btnText.textContent = loading ? (text || 'পাঠানো হচ্ছে...') : 'JOIN NOW';
+      }
+
+      function updateProgress() {
+        const ids = [
+          'name',
+          'age',
+          'dob',
+          'address',
+          'current_address',
+          'phone',
+          'email',
+          'reason'
+        ];
+
+        let filled = 0;
+
+        ids.forEach((id) => {
+          const el = $(id);
+          if (el && el.value.trim() !== '') filled += 1;
+        });
+
+        if (document.querySelector('input[name="previous_team"]:checked')) {
+          filled += 1;
+        }
+
+        const total = ids.length + 1;
+        const percent = Math.round((filled / total) * 100);
+
+        progressFill.style.width = `${percent}%`;
+        progressText.textContent = `${percent}%`;
+      }
+
+      function calculateAge(dobValue) {
+        if (!dobValue) return '';
+
+        const dob = new Date(`${dobValue}T00:00:00`);
+        if (Number.isNaN(dob.getTime())) return '';
+
+        const today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+
+        const monthDiff = today.getMonth() - dob.getMonth();
+
+        if (
+          monthDiff < 0 ||
+          (monthDiff === 0 && today.getDate() < dob.getDate())
+        ) {
+          age -= 1;
+        }
+
+        return age > 0 && age < 120 ? String(age) : '';
+      }
+
+      function resetPhotoPreview() {
+        if (previewUrl) {
+          URL.revokeObjectURL(previewUrl);
+          previewUrl = null;
+        }
+
+        fileThumb.removeAttribute('src');
+        fileDrop.classList.remove('has-file', 'dragover');
+        fileName.textContent = 'ছবি তুলে দিন / পিক আপলোড করুন';
+        fileMeta.textContent = 'JPG, PNG, WEBP • সর্বোচ্চ ৫ MB • Catbox-এ আপলোড হবে';
+      }
+
+      function handlePhotoFile(file) {
+        if (!file) {
+          resetPhotoPreview();
+          return;
+        }
+
+        if (!file.type.startsWith('image/')) {
+          photoInput.value = '';
+          resetPhotoPreview();
+          showToast('শুধুমাত্র ইমেজ ফাইল আপলোড করুন।', 'error');
+          return;
+        }
+
+        if (file.size > CONFIG.maxPhotoMB * 1024 * 1024) {
+          photoInput.value = '';
+          resetPhotoPreview();
+          showToast(`ছবির সাইজ ${CONFIG.maxPhotoMB} MB-এর কম হতে হবে।`, 'error');
+          return;
+        }
+
+        if (previewUrl) {
+          URL.revokeObjectURL(previewUrl);
+        }
+
+        previewUrl = URL.createObjectURL(file);
+        fileThumb.src = previewUrl;
+        fileName.textContent = file.name || 'ছবি সিলেক্ট করা হয়েছে';
+        fileMeta.textContent = `${formatBytes(file.size)} • Catbox-এ আপলোড হবে`;
+        fileDrop.classList.add('has-file');
+      }
+
+      async function getServerCredentials() {
+        const response = await fetch(CONFIG.credentialsFile, {
+          cache: 'no-store'
+        });
+
+        if (!response.ok) {
+          throw new Error(`${CONFIG.credentialsFile} লোড করা যায়নি (${response.status})।`);
+        }
+
+        const text = (await response.text()).replace(/^\uFEFF/, '');
+        const credentials = {};
+
+        text.split(/\r?\n/).forEach((line) => {
+          const trimmed = line.trim();
+
+          if (!trimmed || trimmed.startsWith('#')) return;
+
+          const separator = trimmed.indexOf('=');
+          if (separator === -1) return;
+
+          const key = trimmed.slice(0, separator).trim();
+          let value = trimmed.slice(separator + 1).trim();
+
+          if (
+            (value.startsWith('"') && value.endsWith('"')) ||
+            (value.startsWith("'") && value.endsWith("'"))
+          ) {
+            value = value.slice(1, -1);
+          }
+
+          credentials[key] = value;
+        });
+
+        return credentials;
+      }
+
+      async function uploadToCatbox(file) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), CONFIG.catboxTimeoutMs);
+
+        try {
+          const formData = new FormData();
+          formData.append('reqtype', 'fileupload');
+          formData.append('fileToUpload', file);
+
+          const response = await fetch(CONFIG.catboxEndpoint, {
+            method: 'POST',
+            body: formData,
+            signal: controller.signal
+          });
+
+          if (!response.ok) {
+            throw new Error(`Catbox HTTP ${response.status}`);
+          }
+
+          const url = (await response.text()).trim();
+
+          if (!/^https?:\/\/\S+$/i.test(url)) {
+            throw new Error(`Catbox upload failed: ${url.slice(0, 120)}`);
+          }
+
+          return url;
+        } catch (error) {
+          if (error.name === 'AbortError') {
+            throw new Error('Catbox আপলোড টাইমআউট হয়েছে। আবার চেষ্টা করুন।');
+          }
+
+          if (String(error.message).toLowerCase().includes('failed to fetch')) {
+            throw new Error('Catbox-এ আপলোড ব্লক হয়েছে (CORS/নেটওয়ার্ক)। হোস্টিং বা proxy সেটিংস চেক করুন।');
+          }
+
+          throw error;
+        } finally {
+          clearTimeout(timeoutId);
+        }
+      }
+
+      async function parseTelegramResponse(response) {
+        let result = {};
+
+        try {
+          result = await response.json();
+        } catch (error) {
+          result = {};
+        }
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.description || `Telegram API error (${response.status})`);
+        }
+
+        return result;
+      }
+
+      async function sendTelegramMessage(botToken, chatId, text) {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: text,
+            parse_mode: 'HTML',
+            disable_web_page_preview: true
+          })
+        });
+
+        return parseTelegramResponse(response);
+      }
+
+      function buildApplicationMessage(data, photoUrl) {
+        const photoLine = photoUrl
+          ? `🖼️ <b>ছবি (Catbox):</b> <a href="${escapeHTML(photoUrl)}">ছবি দেখুন</a>`
+          : '🖼️ <b>ছবি:</b> দেওয়া হয়নি';
+
+        return [
+          '<b>🔥 Non-stop Anonymous Cyber Force — NEW APPLICATION</b>',
+          '━━━━━━━━━━━━━━━━━━',
+          `👤 <b>নাম:</b> ${escapeHTML(data.name)}`,
+          `🎂 <b>বয়স:</b> ${escapeHTML(data.age)}`,
+          `📅 <b>জন্ম তারিখ:</b> ${escapeHTML(data.dob)}`,
+          `🏠 <b>স্থায়ী ঠিকানা:</b> ${escapeHTML(data.address)}`,
+          `📍 <b>বর্তমান ঠিকানা:</b> ${escapeHTML(data.currentAddress)}`,
+          `📞 <b>মোবাইল:</b> ${escapeHTML(data.phone)}`,
+          `✉️ <b>ইমেইল:</b> ${escapeHTML(data.email)}`,
+          `🛡️ <b>আগে কোনো টিমে ছিলেন:</b> ${escapeHTML(data.previousTeam)}`,
+          `📝 <b>কারণ:</b> ${escapeHTML(data.reason)}`,
+          photoLine,
+          `🕒 <b>সময়:</b> ${escapeHTML(new Date().toLocaleString('bn-BD'))}`
+        ].join('\n');
+      }
+
+      photoInput.addEventListener('change', () => {
+        handlePhotoFile(photoInput.files[0]);
+      });
+
+      ['dragenter', 'dragover'].forEach((eventName) => {
+        fileDrop.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          fileDrop.classList.add('dragover');
+        });
+      });
+
+      ['dragleave', 'drop'].forEach((eventName) => {
+        fileDrop.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          fileDrop.classList.remove('dragover');
+        });
+      });
+
+      fileDrop.addEventListener('drop', (event) => {
+        const files = event.dataTransfer && event.dataTransfer.files;
+
+        if (!files || !files.length) return;
+
+        const file = files[0];
+
+        try {
+          const dataTransfer = new DataTransfer();
+          dataTransfer.items.add(file);
+          photoInput.files = dataTransfer.files;
+          handlePhotoFile(file);
+        } catch (error) {
+          showToast('এই ব্রাউজারে ড্র্যাগ-ড্রপ সাপোর্ট করছে না। ফাইল সিলেক্ট করুন।', 'error');
+        }
+      });
+
+      dobInput.addEventListener('change', () => {
+        const calculatedAge = calculateAge(dobInput.value);
+
+        if (calculatedAge && !ageInput.value.trim()) {
+          ageInput.value = calculatedAge;
+        }
+
+        updateProgress();
+      });
+
+      reasonInput.addEventListener('input', () => {
+        reasonCount.textContent = `${reasonInput.value.length}/600`;
+        updateProgress();
+      });
+
+      form.addEventListener('input', updateProgress);
+      form.addEventListener('change', updateProgress);
+
+      form.addEventListener('reset', () => {
+        setTimeout(() => {
+          resetPhotoPreview();
+          reasonCount.textContent = '0/600';
+          updateProgress();
+        }, 0);
+      });
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (honeypot.value.trim()) {
+          showToast('অনুরোধ গ্রহণ করা যায়নি।', 'error');
+          return;
+        }
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          showToast('সব প্রয়োজনীয় ঘর সঠিকভাবে পূরণ করুন।', 'error');
+
+          const firstInvalid = form.querySelector(':invalid');
+          if (firstInvalid) {
+            firstInvalid.focus({ preventScroll: true });
+          }
+
+          return;
+        }
+
+        const rawPhone = phoneInput.value.trim().replace(/[\s\-()]/g, '');
+
+        if (!CONFIG.phoneRegex.test(rawPhone)) {
+          showToast('সঠিক মোবাইল নম্বর দিন (যেমন: 01XXXXXXXXX)।', 'error');
+          phoneInput.focus();
+          return;
+        }
+
+        const selectedPhoto =
+          photoInput.files && photoInput.files[0]
+            ? photoInput.files[0]
+            : null;
+
+        if (selectedPhoto) {
+          if (!selectedPhoto.type.startsWith('image/')) {
+            showToast('শুধুমাত্র ইমেজ ফাইল আপলোড করুন।', 'error');
+            return;
+          }
+
+          if (selectedPhoto.size > CONFIG.maxPhotoMB * 1024 * 1024) {
+            showToast(`ছবির সাইজ ${CONFIG.maxPhotoMB} MB-এর কম হতে হবে।`, 'error');
+            return;
+          }
+        }
+
+        const formData = new FormData(form);
+
+        const data = {
+          name: String(formData.get('name') || '').trim(),
+          age: String(formData.get('age') || '').trim(),
+          dob: String(formData.get('dob') || '').trim(),
+          address: String(formData.get('address') || '').trim(),
+          currentAddress: String(formData.get('current_address') || '').trim(),
+          phone: String(formData.get('phone') || '').trim(),
+          email: String(formData.get('email') || '').trim(),
+          previousTeam: String(formData.get('previous_team') || '').trim(),
+          reason: String(formData.get('reason') || '').trim()
+        };
+
+        setLoading(true, 'server.txt লোড হচ্ছে...');
+
+        try {
+          const credentials = await getServerCredentials();
+
+          if (!credentials.BOT_TOKEN || !credentials.CHAT_ID) {
+            throw new Error('server.txt ফাইলে BOT_TOKEN এবং CHAT_ID সেট করুন।');
+          }
+
+          let photoUrl = '';
+
+          if (selectedPhoto) {
+            setLoading(true, 'Catbox-এ ছবি আপলোড হচ্ছে...');
+            photoUrl = await uploadToCatbox(selectedPhoto);
+          }
+
+          setLoading(true, 'আবেদন পাঠানো হচ্ছে...');
+
+          const message = buildApplicationMessage(data, photoUrl);
+
+          await sendTelegramMessage(
+            credentials.BOT_TOKEN,
+            credentials.CHAT_ID,
+            message
+          );
+
+          showToast('আপনার আবেদন সফলভাবে জমা হয়েছে। টিম শীঘ্রই যোগাযোগ করবে।', 'success');
+
+          form.reset();
+          resetPhotoPreview();
+          reasonCount.textContent = '0/600';
+          updateProgress();
+        } catch (error) {
+          console.error(error);
+
+          let errorMessage = error && error.message
+            ? error.message
+            : 'ইন্টারনেট বা সার্ভারে সমস্যা হয়েছে। আবার চেষ্টা করুন।';
+
+          if (String(errorMessage).toLowerCase().includes('failed to fetch')) {
+            errorMessage = 'server.txt লোড করা যায়নি বা নেটওয়ার্ক সমস্যা হয়েছে। সাইটটি HTTP/HTTPS সার্ভারে হোস্ট করে চেষ্টা করুন।';
+          }
+
+          showToast(errorMessage, 'error');
+        } finally {
+          setLoading(false);
+        }
+      });
+
+      updateProgress();
+      reasonCount.textContent = '0/600';
+    })();
+  </script>
+</body>
+</html>
